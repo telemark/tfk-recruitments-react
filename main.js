@@ -2,12 +2,13 @@
 
 var React = require('react');
 var getOpenings = require('./utils/getOpenings');
+var fixDateFormat = require('./utils/fixDateFormat');
 var apiUrl = 'https://api.t-fk.no/recruitments';
 
 var ShowMoreLink = React.createClass({
   render: function(){
     return(
-      <div class="clearfix">
+      <div className="clearfix">
         <a href="https://hrm.btvregion.no/tfk_recruitment/" target="_blank" className="see-more">Se alle ledige stillinger</a>
       </div>
     );
@@ -23,7 +24,7 @@ var Opening = React.createClass({
           <div className="media__bd">
             <h3 className="item__header">
               <a href={this.props.opening.link} target="_blank">{this.props.opening.title}</a></h3>
-              <span className="sidenote">Søknadsfrist: {this.props.opening.deadline}</span>
+              <span className="sidenote">Søknadsfrist: {fixDateFormat(this.props.opening.deadline)}</span>
           </div>
         </div>
       </div>
