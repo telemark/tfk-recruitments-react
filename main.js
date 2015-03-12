@@ -4,6 +4,16 @@ var React = require('react');
 var getOpenings = require('./utils/getOpenings');
 var apiUrl = 'https://api.t-fk.no/recruitments';
 
+var ShowMoreLink = React.createClass({
+  render: function(){
+    return(
+      <div class="clearfix">
+        <a href="https://hrm.btvregion.no/tfk_recruitment/" target="_blank" class="see-more">Se alle ledige stillinger</a>
+      </div>
+    );
+  }
+});
+
 var Opening = React.createClass({
   render: function(){
     return (
@@ -24,7 +34,8 @@ var Opening = React.createClass({
 var App = React.createClass({
   getInitialState: function() {
   return {
-    openings: []
+    openings: [],
+    showMore: false
   };
 },
   componentDidMount: function() {
@@ -36,7 +47,8 @@ var App = React.createClass({
         console.error(error);
       } else {
         that.setState({
-          openings:data
+          openings:data.openings,
+          showMore: data.showMore
         });
       }
     });
@@ -48,12 +60,15 @@ render: function() {
       <Opening opening={opening} key={opening.jobid} />
     );
   });
+  var showMoreLinkOrNot = this.state.showMore ? <ShowMoreLink />: '';
   return (
     <div className="constrained-content">
   <h2>Ledige stillinger</h2>
       <div className="clearfix grid">
       {openings}
         </div>
+
+    {showMoreLinkOrNot}
 </div>
 );
 }
