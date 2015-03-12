@@ -8,7 +8,7 @@ var ShowMoreLink = React.createClass({
   render: function(){
     return(
       <div class="clearfix">
-        <a href="https://hrm.btvregion.no/tfk_recruitment/" target="_blank" class="see-more">Se alle ledige stillinger</a>
+        <a href="https://hrm.btvregion.no/tfk_recruitment/" target="_blank" className="see-more">Se alle ledige stillinger</a>
       </div>
     );
   }
