@@ -12,6 +12,8 @@ var CleanCSS = require('clean-css');
 var map = require('vinyl-map');
 var concat = require('gulp-concat');
 
+process.env.NODE_ENV = 'production';
+
 var getBundleName = function () {
   var version = require('./package.json').version;
   var name = require('./package.json').name;
