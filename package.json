@@ -23,18 +23,18 @@
     "url": "http://github.com/telemark/tfk-recruitments-react/issues"
   },
   "devDependencies": {
-    "browserify": "^9.0.3",
-    "clean-css": "^3.1.0",
+    "browserify": "^14.0.0",
+    "clean-css": "^4.0.4",
     "gulp": "^3.8.11",
     "gulp-concat": "^2.5.2",
-    "gulp-sourcemaps": "^1.5.0",
-    "gulp-uglify": "^1.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^2.0.1",
     "reactify": "^1.0.0",
     "run-sequence": "^1.0.2",
     "uglify-js": "^2.4.16",
     "vinyl-buffer": "^1.0.0",
     "vinyl-map": "^1.0.1",
     "vinyl-source-stream": "^1.0.0",
-    "react": "^0.13.0"
+    "react": "^15.4.2"
   }
 }
